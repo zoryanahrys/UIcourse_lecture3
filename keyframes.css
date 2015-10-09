@@ -1,0 +1,24 @@
+.keyframes {
+    width: 20px;
+    height: 20px;
+    margin: 50px;
+    background: red;
+    top:50px;
+	left:0px;
+	-webkit-animation-name:"movement";
+	-webkit-animation-duration:10s;
+}
+@-webkit-keyframes "movement" {
+    from {
+	top:50px;
+	left:0px;
+    }
+    50% {
+	top:150px;
+	left:100px;
+    }
+    to {
+	top:400px;
+	left:300px;
+    }	
+}
