@@ -47,16 +47,21 @@ table {
 	border-spacing: 0;
 }
 
-/*основний стиль */
+/*основной стиль */
 body{
 	background-image: url(images/main.jpg);
     color: #afafaf;
     font-family: sans-serif;
 }
+/*главный блок*/
 .main{
     width: 960px;
     margin: 0 auto;
 }
+a{
+    color: #8fc902;
+}
+/*логин и пароль*/
 .psw{
     text-align: right;
     height: 27px;
@@ -65,7 +70,8 @@ body{
 }
 .placeholder{
     padding-left: 7px;
-    height: 20px;
+    padding-bottom: 2px;
+    height: 17px;
 }
 .button{
     background-color: #8fc902;
@@ -78,14 +84,18 @@ body{
     font-weight: bold;
     font-size: 12px;
 }
-a{
-    color: #8fc902;
-}
+/*блок header*/
 header{
     height: 200px;
 }
+/*первое меню в header*/
 .menu{
     height: 36px;
+}
+.menu_right{
+    float: right; 
+    margin-right: -20px;
+    letter-spacing: 20px;
 }
 .menu ul {
     background: #1e1e20;
@@ -107,6 +117,7 @@ header{
 .menu ul li a:hover{
     color: #8fc902;
 }
+/*логотип*/
 .site{
     float: left;
     height: 115px;
@@ -133,6 +144,7 @@ header{
     width: auto;
     margin: 20px 10px 20px 20px;
 }
+/*второе меню в header*/
 .menu_2{
     width: 960px;
     height: 50px;
@@ -160,8 +172,12 @@ header{
 }
 .menu_2 ul li input{
 	margin: 15px 0 20px 175px;
-    padding-right: 30px;
+    text-align: justify;
+    height: 20px;
+    padding-bottom: 5px;
+    word-spacing: 105px;
 }
+/*блок главной игры*/
 .egg_defender{
     width: 960px;
     height: 250px;
@@ -180,6 +196,16 @@ header{
     padding-top: 10px;
     padding-right: 10px;
     font-size: 15px;
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 177px;
+    margin: 0 auto;
+    line-height: 1;
+    -webkit-line-clamp: 11;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .egg_defender p a{
     color: #8fc902;
@@ -203,16 +229,18 @@ header{
     height: 30px;
     width: 140px;
 }
+/*блок левой колонки*/
 .content{
     width: 640px;
     margin-right: 25px;
     margin-top: 15px;
     float: left;
 }
+/*блок новостей*/
 .news{
     background-color: #252527;
     border-radius: 10px;
-    height: 890px;
+    height: 810px;
 }
 .heading{
     height: 30px;
@@ -227,7 +255,7 @@ header{
     border-top-left-radius: 10px;
 }
 .news a{
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
 }
 .news hr{
@@ -238,13 +266,18 @@ header{
 }
 .news ul{
     text-align: justify;
-    margin-bottom: -10px;
+    margin-bottom: -14px;
+}
+.news__img{
+    padding-top: 10px;
+}
+.news__img li{
+    width: 95px;
 }
 .news ul li{
     display: inline-block;
     width: 100px;
     font-size: 10px;
-    line-height: 17px;
     display: inline-block;
     position: relative;
     padding-left: 20px;
@@ -264,9 +297,12 @@ header{
 .news ul li a{
     font-weight: bold;
     text-decoration: none;
+    font-size: 10px;
 }
 .news img{
     border-radius: 20%;
+    border: 2px solid;
+    border-color: white;
 }
 .reading{
     text-decoration: none;
@@ -274,6 +310,7 @@ header{
     text-transform: uppercase;
     padding-left: 20px;
 }
+/*блок игры 1,2,3*/
 article{
     background-color: #252527;
     margin-top: 20px;
@@ -300,6 +337,23 @@ article input{
     padding-top: 20px;
     font-size: 14px;
     padding-right: 10px;
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    margin: 0 auto;
+    line-height: 1;
+    height: 130px;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.games{
+    clear: both;
+}
+.games_p time{
+    float: right;
+    padding-right: 10px;
 }
 .games p a{
     text-transform: uppercase;
@@ -320,19 +374,25 @@ article input{
 	margin-top: 16px;
 	padding: 5px 8px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 .rating{
     clear: both;
+    margin-top: 15px;
 }
-.rating dl{
+.rating ul{
+    padding-left:20px;
+}
+.rating ul li{
     float: left;
+    font-size: 11px;
 }
-.star-rating ol{
+.star-rating{
     margin: 0;
     padding: 0;
     list-style: none;
-    width: 100px;
-    height: 20px;
+    width: 50px;
+    height: 10px;
     position: relative;
     background: url(images/stars.png);
 }
@@ -343,8 +403,8 @@ article input{
 }
 .star-rating li a{
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     text-indent: -9999px;
     position: absolute;
     text-decoration: none;
@@ -359,43 +419,49 @@ article input{
     left: 0;
 }
 .star1:hover{
-    width: 20px;
+    width: 10px;
 }
 .star2{
-    left: 20px;
+    left: 10px;
 }
 .star2:hover{
-    width: 40px;
+    width: 20px;
 }
 .star3{
-    left: 40px;
+    left: 20px;
 }
 .star3:hover{
-    width: 60px;
+    width: 30px;
 }
 .star4{
-    left: 60px;
+    left: 30px;
 }
 .star4:hover{
-    width: 80px;
+    width: 40px;
 }
 .star5{
-    left: 80px;
+    left: 40px;
 }
 .star5:hover{
-    width: 100px;
+    width: 50px;
 }
 .current {
     background: url(images/stars.png) left bottom;    
-    height: 20px;
+    height: 10px;
+    width: 35px;
     z-index: 1;
 }
+.rating_comments{
+    margin-right: 110px;
+}
+/*блок правой колонки*/
 aside{
     float: right;
     width: 295px;
     border-radius: 10px;
     margin-top: 15px;
 }
+/*блок популярное*/
 .popular {
     height: 380px;
     background-color: #252527;
@@ -413,6 +479,7 @@ aside{
     text-decoration: none;
     border-bottom: 1px dotted #8fc902;
 }
+/*блок наша гордость*/
 .pride{
     margin-top: 20px;
     background-color: #252527;
@@ -427,12 +494,14 @@ aside{
 .pride_1 img{
     float:left;
     padding: 10px 10px 10px 20px;
+    border-radius: 10px;
 }
 .pride_1 p{
     padding-top: 10px;
     padding-right: 10px;
     font-size: 15px;
 }
+/*блок рекламы*/
 .advertising{
     margin-top: 20px;
     background-color: #252527;
@@ -451,6 +520,7 @@ aside{
 .yandex:first-letter{
     color: red;
 }
+/*блок соцсети*/
 .socialnetwork{
     margin-top: 20px;
     background-color: #252527;
@@ -459,10 +529,14 @@ aside{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+#vk_groups {
+    margin-left: 47px;
+}
+/*блок облака тэгов*/
 .tags{
     margin-top: 20px;
     background-color: #252527;
-    height: 280px;
+    height: 410px;
     font-weight: bold;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -483,20 +557,17 @@ aside{
 .big{
 	text-decoration: none;
 	color: white;
-	font-size: 20px; 
+	font-size: 30px; 
 }
 .bigger{
 	text-decoration: none;
 	color: white;
 	font-size: 25px; 
 }
-#vk_groups {
-    margin-left: 47px;
-}
+/*блок страниц*/
 .pages{
-    width: 960px;
-    clear: both;
-    margin-top: 20px;
+    margin: 0 auto;
+    width:350px;
 }
 .pages ul li{
     display: inline-block;
@@ -504,32 +575,22 @@ aside{
     margin: 10px;
 }
 .pages ul li a{
-    font-size: 12px;
+    font-size: 13px;
 }
 .number{
     display: block;
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     padding-top: 2px;
+    padding-left: 4px;
+    border-radius: 3px;
 }
 .number:hover{
     background: white;
     color: black;
     text-decoration: none;
 }
-.site_f {
-	float: right;
-}
-.site_f p {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    padding-right: 20px;
-    color: white;
- }
-.site_f p span {
-	color:#86bc04;
-}
+/*подвал*/
 footer{
     width: 960px;
     clear: both;
@@ -553,4 +614,25 @@ footer ul li a{
 }
 footer ul li a:hover{
     color: #8fc902;
+}
+.site_f {
+    float: right;
+}
+.site_g {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-right: 20px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.site_g span {
+	color:#86bc04;
+}
+.site_c{
+    font-size: 10px;
+    margin-bottom: 10px;
+    float: right;
+    padding-right: 20px;
 }
