@@ -123,7 +123,7 @@ header{
     height: 115px;
     background-color: #2f2f31;
 }
-.site p{
+.site h1{
     font-size: 29px;
     font-weight: bold;
     margin-top: 25px;
@@ -131,7 +131,7 @@ header{
     text-transform: uppercase;
     color: white;
 }
-.site p span{
+.site h1 span{
     color: #8fc902;
 }
 .logo{
@@ -166,9 +166,12 @@ header{
     padding: 16px 17px;
     text-transform: uppercase;
 }
-.menu_2 ul li a:hover{
+.menu_2 ul li:hover a{
     background: white;
     color: black;
+}
+.menu_2 ul li:first-child:hover > a{
+    border-bottom-left-radius: 10px;
 }
 .menu_2 ul li input{
 	margin: 15px 0 20px 175px;
@@ -185,41 +188,47 @@ header{
     background-color: #2f2f31;
     border-radius: 10px; 
 }
-.egg_defender__img{
+.egg_defender__img img{
     height: 240px;
     float: left;
     width: 661px;
-    padding: 0 10px 10px 0;
-    border-top-right-radius: 10px;
 }
-.egg_defender p{
-    padding-top: 10px;
+.egg_defender__text{
+   float: right; 
+   width: 279px;
+   height: 240px;
+   margin-left: 20px;
+   margin-top: 10px;
+}
+.egg_defender__text p{
     padding-right: 10px;
     font-size: 15px;
     display: block;
     display: -webkit-box;
     max-width: 100%;
-    height: 177px;
+    height: 92px;
     margin: 0 auto;
     line-height: 1;
-    -webkit-line-clamp: 11;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.egg_defender p a{
+.egg_defender__text h1 a{
     color: #8fc902;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
 }
-.egg_defender p span{
-    font-weight: bold;
+.egg_defender__text h2{
     font-size: 20px;
+    font-weight: bold;
     color: white;
     text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
-.egg_defender input{
+.egg_defender__text input{
     background: #8fc902;
     border-color: #8fc902;
     text-transform: uppercase;
@@ -228,6 +237,7 @@ header{
     border-radius: 5px;
     height: 30px;
     width: 140px;
+    margin-top: 15px;
 }
 /*блок левой колонки*/
 .content{
@@ -240,7 +250,7 @@ header{
 .news{
     background-color: #252527;
     border-radius: 10px;
-    height: 810px;
+    height: 855px;
 }
 .heading{
     height: 30px;
@@ -254,55 +264,34 @@ header{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
-.news a{
-    font-size: 13px;
-    font-weight: bold;
-}
 .news hr{
     border: none;
     color: #464646;
     background-color: #464646;
     height: 1px;
 }
-.news ul{
-    text-align: justify;
-    margin-bottom: -14px;
+.news__list{
+    margin-top: 15px;
 }
-.news__img{
-    padding-top: 10px;
-}
-.news__img li{
-    width: 95px;
-}
-.news ul li{
-    display: inline-block;
-    width: 100px;
-    font-size: 10px;
-    display: inline-block;
-    position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.news ul:before{
-    content: '';
-    display: block;
-    width: 100%;
-}
- 
-.news ul:after{
-    content: '';
-    display: inline-block;
-    width: 100%;
-}
-.news ul li a{
+.news__list li{
+    font-size: 11px;
     font-weight: bold;
-    text-decoration: none;
-    font-size: 10px;
+    width: 95px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 15px;
 }
-.news img{
+.news__list li a{
+    text-decoration: none;
+    font-size: 13px;
+}
+.news__list li img{
     border-radius: 20%;
     border: 2px solid;
     border-color: white;
+    width: 95px;
 }
 .reading{
     text-decoration: none;
@@ -326,7 +315,7 @@ article input{
 }
 .games img{
     float: left;
-    margin: 20px 10px 10px 20px;
+    margin: 0px 10px 10px 20px;
 }
 .games_p {
     padding-top: 10px;
@@ -334,7 +323,7 @@ article input{
     font-size: 11px;
 }
 .games p {
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: 14px;
     padding-right: 10px;
     display: block;
@@ -342,29 +331,32 @@ article input{
     max-width: 100%;
     margin: 0 auto;
     line-height: 1;
-    height: 130px;
-    -webkit-line-clamp: 9;
+    height: 55px;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 .games{
     clear: both;
+    margin-top: 20px;
 }
 .games_p time{
     float: right;
     padding-right: 10px;
 }
-.games p a{
+.games h4 a{
+    font-size: 12px;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
 }
-.games span{
+.games h5{
     text-transform: uppercase;
     color: white;
     font-weight: bold;
     font-size: 15px;
+    padding-top: 10px;
 }
 .games_b {
     background-color: #404040;
@@ -468,9 +460,9 @@ aside{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.popular ul li{
+.popular ul {
     padding-left: 20px;
-    padding-left: 20px;
+    padding-top: 10px;
 }
 .popular ul li a{
     font-size: 13px;
@@ -485,19 +477,23 @@ aside{
     background-color: #252527;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    height: 300px;
+    height: 310px;
 }
 .pride_1{
     clear: both;
     margin-bottom: 10px;
+    padding-top: 10px;
 }
 .pride_1 img{
     float:left;
-    padding: 10px 10px 10px 20px;
+    padding: 0 10px 10px 20px;
     border-radius: 10px;
 }
+.pride_1 a{
+    font-size: 15px;
+}
 .pride_1 p{
-    padding-top: 10px;
+    padding-top: 5px;
     padding-right: 10px;
     font-size: 15px;
 }
@@ -509,16 +505,19 @@ aside{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.advertising__p{
-    padding: 10px 10px 10px 20px;;
-    color: white;
-}
 .yandex{
     font-weight: bold;
     margin-bottom: 15px;
 }
 .yandex:first-letter{
     color: red;
+}
+.advertising__text{
+    padding: 10px 10px 10px 20px;;
+    color: white;
+}
+.advertising__text ul li{
+    margin-bottom: 10px;
 }
 /*блок соцсети*/
 .socialnetwork{
@@ -530,6 +529,7 @@ aside{
     border-bottom-right-radius: 10px;
 }
 #vk_groups {
+    margin-top: 20px;
     margin-left: 47px;
 }
 /*блок облака тэгов*/
@@ -541,8 +541,14 @@ aside{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.tags a{
+.tags__text a{
     padding-left: 20px;
+}
+.tags__text{
+    margin-top: 15px;
+}
+.tags__text a:hover{
+    color: #86bc04;
 }
 .smaller{
 	text-decoration: none;
@@ -559,7 +565,7 @@ aside{
 	color: white;
 	font-size: 30px; 
 }
-.bigger{
+.biger{
 	text-decoration: none;
 	color: white;
 	font-size: 25px; 
@@ -594,7 +600,7 @@ aside{
 footer{
     width: 960px;
     clear: both;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 footer hr{
     border: none;
@@ -615,10 +621,10 @@ footer ul li a{
 footer ul li a:hover{
     color: #8fc902;
 }
-.site_f {
+.site_footer {
     float: right;
 }
-.site_g {
+.site_footer h1 {
     font-size: 25px;
     font-weight: bold;
     margin-top: 20px;
@@ -627,10 +633,10 @@ footer ul li a:hover{
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-.site_g span {
+.site_footer h1 span {
 	color:#86bc04;
 }
-.site_c{
+.site_copy{
     font-size: 10px;
     margin-bottom: 10px;
     float: right;
